@@ -58,7 +58,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Subject{" +
+        return "Student{" +
                 "studentId=" + studentId +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
