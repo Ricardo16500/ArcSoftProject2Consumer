@@ -15,7 +15,7 @@ public class TeacherController {
     public void d_teacher(List<Teacher> teacher){
         LOGGER.info("Direct exchange teacher");
         for (int i =0; i<teacher.size();i++){
-           // System.out.print("teacher list, direct exchange ");
+            System.out.print("teacher list, direct exchange ");
             System.out.println(teacher.get(i));
         }
     }
@@ -24,7 +24,7 @@ public class TeacherController {
     public void t_teacher(List<Teacher> teacher){
         LOGGER.info("Topic exchange teacher");
         for (int i =0; i<teacher.size();i++){
-            //System.out.print("teacher list, topic exchange teacher ");
+           System.out.print("teacher list, topic exchange teacher ");
             System.out.println(teacher.get(i));
         }
     }

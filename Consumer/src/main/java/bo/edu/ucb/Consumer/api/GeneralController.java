@@ -16,7 +16,7 @@ public class GeneralController {
         LOGGER.info("Fanout 1, general ");
         for (int i =0; i<general.size();i++){
 
-            //System.out.print("Fanout Exchange Fisrt Queue");
+            System.out.print("Fanout Exchange Fisrt Queue");
             System.out.println(general.get(i));
         }
     }
@@ -25,7 +25,7 @@ public class GeneralController {
         LOGGER.info("Fanout 2, general ");
         for (int i =0; i<general.size();i++){
 
-            //System.out.print("Fanout Exchange Second Queue ");
+            System.out.print("Fanout Exchange Second Queue ");
             System.out.println(general.get(i));
         }
     }
@@ -33,7 +33,7 @@ public class GeneralController {
     public void f_student3(ArrayList general){
         LOGGER.info("Fanout 3, general ");
         for (int i =0; i<general.size();i++){
-            //System.out.print("Fanout Exchange Third Queue ");
+            System.out.print("Fanout Exchange Third Queue ");
             System.out.println(general.get(i));
         }
     }
@@ -41,18 +41,9 @@ public class GeneralController {
     public void t_student2(ArrayList general){
         LOGGER.info("All topic ");
         for (int i =0; i<general.size();i++){
-            //System.out.print("Topic Exchange all ");
+            System.out.print("Topic Exchange all ");
             System.out.println(general.get(i));
         }
     }
-    @RabbitListener(queues = RabbitMqConfig.T_QUEUE_5)
-    public void t_student3(ArrayList general){
-        LOGGER.info("Topic, student and teacher ");
-        for (int i =0; i<general.size();i++){
-            //System.out.print("Topic Exchange student, teacher ");
-            System.out.println(general.get(i));
-        }
 
-
-    }
 }

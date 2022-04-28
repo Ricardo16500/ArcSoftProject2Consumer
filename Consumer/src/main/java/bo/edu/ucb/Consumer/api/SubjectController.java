@@ -16,7 +16,7 @@ public class SubjectController {
     public void d_subject(List<Subject> subject){
         LOGGER.info("Direct Exchange Subject");
         for (int i =0; i<subject.size();i++){
-            //System.out.print("Subject list direct exchange");
+            System.out.print("Subject list direct exchange");
             System.out.println(subject.get(i));
         }
     }
@@ -25,7 +25,7 @@ public class SubjectController {
     public void t_subject(List<Subject> subject){
         LOGGER.info("Topic Exchange Subject");
         for (int i =0; i<subject.size();i++){
-            //System.out.print("Subject list, topic exchange subject ");
+            System.out.print("Subject list, topic exchange subject ");
             System.out.println(subject.get(i));
         }
     }

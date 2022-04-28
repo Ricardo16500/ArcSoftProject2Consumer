@@ -21,7 +21,7 @@ public class StudentController {
     public void d_student(List<Student> student){
         LOGGER.info("Direct Exchange student");
         for (int i =0; i<student.size();i++){
-            //System.out.print("Direct Exchange ");
+            System.out.print("Direct Exchange ");
             System.out.println(student.get(i));
         }
     }
@@ -31,7 +31,7 @@ public class StudentController {
     public void t_student(ArrayList student){
         LOGGER.info("Topic Exchange student");
         for (int i =0; i<student.size();i++){
-            //System.out.print ("Topic Exchange Student ");
+            System.out.print ("Topic Exchange Student ");
             System.out.println(student.get(i));
         }
     }
