@@ -17,7 +17,7 @@ public class SubjectController {
             System.out.println(subject.get(i));
         }
     }
-
+/*
     @RabbitListener(queues = RabbitMqConfig.F_QUEUE_1)
     public void f_subject(List<Subject> subject){
        Integer cont = 0;
@@ -64,13 +64,15 @@ public class SubjectController {
         }
     }
 
+
+ */
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_2)
     public void t_subject(List<Subject> subject){
         for (int i =0; i<subject.size();i++){
             System.out.print("Subject list, topic exchange subject ");
             System.out.println(subject.get(i));
         }
-    }
+    }/*
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_4)
     public void t_subject_total(List<Subject> subject) {
         Integer cont = 0;
@@ -85,6 +87,6 @@ public class SubjectController {
                 System.out.println(subject.get(i));
             }
         }
-    }
+    }*/
 
 }

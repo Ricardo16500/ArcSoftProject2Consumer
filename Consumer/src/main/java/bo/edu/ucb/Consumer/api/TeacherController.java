@@ -16,7 +16,7 @@ public class TeacherController {
             System.out.println(teacher.get(i));
         }
     }
-
+/*
     @RabbitListener(queues = RabbitMqConfig.F_QUEUE_1)
     public void f_teacher(List<Teacher> teacher){
         Integer cont = 0;
@@ -62,6 +62,8 @@ public class TeacherController {
             }
         }
     }
+
+ */
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_3)
     public void t_teacher(List<Teacher> teacher){
         for (int i =0; i<teacher.size();i++){
@@ -69,6 +71,7 @@ public class TeacherController {
             System.out.println(teacher.get(i));
         }
     }
+    /*
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_4)
     public void t_teacher_2(List<Teacher> teacher){
 
@@ -100,5 +103,5 @@ public class TeacherController {
             }
         }
     }
-
+*/
 }

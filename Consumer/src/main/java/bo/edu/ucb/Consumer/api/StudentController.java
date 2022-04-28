@@ -5,6 +5,8 @@ import bo.edu.ucb.Consumer.Dto.Student;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -19,7 +21,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.F_QUEUE_1)
-    public void f_student(List<Student> student){
+    public void f_student(ArrayList student){
 
         for (int i =0; i<student.size();i++){
             System.out.print("Fanout Exchange Fisrt Queue");
@@ -27,7 +29,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.F_QUEUE_2)
-    public void f_student2(List<Student> student){
+    public void f_student2(ArrayList student){
 
         for (int i =0; i<student.size();i++){
             System.out.print("Fanout Exchange Second Queue ");
@@ -35,7 +37,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.F_QUEUE_3)
-    public void f_student3(List<Student> student){
+    public void f_student3(ArrayList student){
 
         for (int i =0; i<student.size();i++){
             System.out.print("Fanout Exchange Third Queue ");
@@ -43,7 +45,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_1)
-    public void t_student(List<Student> student){
+    public void t_student(ArrayList student){
 
         for (int i =0; i<student.size();i++){
             System.out.print ("Topic Exchange Student ");
@@ -51,7 +53,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_4)
-    public void t_student2(List<Student> student){
+    public void t_student2(ArrayList student){
 
         for (int i =0; i<student.size();i++){
             System.out.print("Topic Exchange all ");
@@ -59,7 +61,7 @@ public class StudentController {
         }
     }
     @RabbitListener(queues = RabbitMqConfig.T_QUEUE_5)
-    public void t_student3(List<Student> student){
+    public void t_student3(ArrayList student){
         for (int i =0; i<student.size();i++){
             System.out.print("Topic Exchange student, teacher ");
             System.out.println(student.get(i));
