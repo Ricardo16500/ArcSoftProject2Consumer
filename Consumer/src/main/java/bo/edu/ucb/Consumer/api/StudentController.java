@@ -1,9 +1,8 @@
 package bo.edu.ucb.Consumer.api;
 
-import bo.edu.ucb.Consumer.Config.RabbitMqConfig;
+import bo.edu.ucb.Consumer.config.RabbitMqConfig;
 import bo.edu.ucb.Consumer.Dto.Student;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.amqp.rabbit.annotation.RabbitListeners;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
